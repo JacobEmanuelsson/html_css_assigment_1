@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,21 +8,19 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.hero{
-    /*font-family: Georgia, serif;*/
-    font-family: 'Times New Roman', Times, serif;
+.hero {
     font-weight: 100;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    flex-direction: column;
+    color: white;
     padding: 2.5rem;
     height: 100vh;
 
@@ -31,22 +29,20 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
-    
 }
 
-.hero h1{
+.hero h1 {
     font-size: 2rem;
-    margin-bottom: 3rem;
     margin-top: 2.1rem;
+    margin-bottom: 3rem;
 }
 
-.hero p{
+.hero p {
     font-size: 1.6rem;
     margin-bottom: 3rem;
 }
 
-.move-btn-1, .move-btn-1:hover, .move-btn:visited, .move-btn:active{
+.move-btn-1, .move-btn-1:hover, .move-btn:visited, .move-btn:active {
     color: inherit;
     position: absolute;
     left: 50%;
@@ -54,7 +50,7 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.move-btn, .move-btn:hover, .move-btn:visited, .move-btn:active{
+.move-btn, .move-btn:hover, .move-btn:visited, .move-btn:active {
     color: inherit;
     position: absolute;
     bottom: 5%;
@@ -64,34 +60,34 @@ body{
     font-size: 1.5rem;
 }
 
-.hero-button{
+.hero-button {
     display: flex;
 }
 
-.header{
-    font-family: 'Times New Roman', Times, serif;
+.header {
     font-weight: 100;
     font-size: 1.4rem;
     height: 17vh;
-    display:flex;
+
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
-    position:absolute;
-    width: 100%;
+
+    position: absolute;
     top: 0;
+    width: 100%;
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
 }
 
 .header a {
-    color:white;
+    color: white;
     margin-bottom: 0.2rem;
 }
 
-.header a:link{
+.header a:link {
     text-decoration: none;
 }
-
 
 .team {
     display: grid;
@@ -103,7 +99,6 @@ body{
 }
 
 .team h2 {
-    font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -137,18 +132,17 @@ body{
     font-size: 4rem;
     font-weight: bold;
 }
+
 blockquote::before {
-  content: "\201D";          
-  font-family: Arial, Helvetica, sans-serif;  
-  font-size: 3.5em;
-  line-height: 0;                
-  vertical-align: -0.35em;       
-  margin-right: 0.1em;
+    content: "\201D";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+    line-height: 0;
+    vertical-align: -0.35em;
+    margin-right: 0.1em;
 }
 
-
-
-footer{
+footer {
     font-weight: 100;
     font-size: 1.2rem;
     line-height: 1.8;
@@ -160,18 +154,18 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem;
-    gap: 1.5rem;
     justify-items: center;
+    gap: 1.5rem;
+    padding: 3rem;
 }
 
-.footer-section-3{
+.footer-section-3 {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
 }
 
-.social{
+.social {
     color: white;
     text-decoration: none;
 
@@ -180,42 +174,23 @@ footer{
     gap: 1rem;
 }
 
-.social .fa-brands{
+.social .fa-brands {
     font-size: 1.4rem;
     width: 1.6rem;
     text-align: center;
 }
 
-
-
-/*Desktop view */
-
+/* Desktop view */
 
 @media screen and (min-width: 480px) {
-    .header{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 100;
-    font-size: 1.4rem;
-    height: 10vh;
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
-    position:absolute;
-    width: 100%;
-    top: 0;
+    .header {
+        flex-direction: row;
+        height: 10vh;
     }
 
     .header a {
-        color:white;
         margin-right: 2rem;
     }
-
-    .header a:link{
-        text-decoration: none;
-    }
-
 
     .card-layout {
         display: grid;
@@ -225,69 +200,29 @@ footer{
 
     .team {
         display: block;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 1rem;
-        padding: 2rem 1rem;
-        justify-content: center;
-        position: relative;
     }
 
-    .team h2 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .team-title{
-        grid-area: 1 / 1 / 2 / 2;
-    }
 
     .avatar {
-    width: 20vw;
-    border-radius: 50%;
-    box-shadow: 3px 4px 12px 12px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
+        width: 20vw;
     }
 
-    .avatar-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem;
-    }
-
-    .avatar-quote {
-        background-color: lightgrey;
-        border-radius: 3%;
-        min-height: 10vh;
-        align-self: center;
-        position: relative;
-        padding: 1rem;
-        margin-top: 20px;
-    }
-
-    .quote-mark {
-        font-size: 4rem;
-        font-weight: bold;
-    }
-
-    .footer{
+    .footer {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         height: 30vh;
     }
 
-    .footer-section-1{
-        grid-area: 1;
-    }
-    .footer-section-2{
-        grid-area: 1;
-    }
-    .footer-section-3{
+    .footer-section-1 {
         grid-area: 1;
     }
 
+    .footer-section-2 {
+        grid-area: 1;
+    }
+
+    .footer-section-3 {
+        grid-area: 1;
+    }
 }

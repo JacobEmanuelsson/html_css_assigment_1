@@ -24,7 +24,7 @@ body {
     padding: 2.5rem;
     height: 100vh;
 
-    background-image: url('assets/assets/negative-space-black-forest-dawn.jpg');
+    background-image: url('/html_css_assigment_1/assets/assets/negative-space-black-forest-dawn.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

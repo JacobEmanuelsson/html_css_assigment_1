@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+}
 
+body{
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .hero{
-    font-family: Georgia, serif;
+    /*font-family: Georgia, serif;*/
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
 
     display: flex;
@@ -18,7 +23,7 @@ body{
     color: white;
     text-align: center;
     flex-direction: column;
-    padding: 3rem;
+    padding: 2.5rem;
     height: 100vh;
 
     background-image: url('/assets/assets/negative-space-black-forest-dawn.jpg');
@@ -33,17 +38,40 @@ body{
 .hero h1{
     font-size: 2rem;
     margin-bottom: 3rem;
+    margin-top: 2.1rem;
 }
 
 .hero p{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 3rem;
 }
 
+.move-btn-1, .move-btn-1:hover, .move-btn:visited, .move-btn:active{
+    color: inherit;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.move-btn, .move-btn:hover, .move-btn:visited, .move-btn:active{
+    color: inherit;
+    position: absolute;
+    bottom: 5%;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+.hero-button{
+    display: flex;
+}
+
 .header{
-    font-family: Georgia, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     height: 17vh;
     display:flex;
     flex-direction: column;
@@ -57,7 +85,7 @@ body{
 
 .header a {
     color:white;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 
 .header a:link{
@@ -71,10 +99,11 @@ body{
     gap: 1rem;
     padding: 2rem 1rem;
     justify-content: center;
+    position: relative;
 }
 
 .team h2 {
-    font-family: Georgia, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -105,13 +134,21 @@ body{
 }
 
 .quote-mark {
-    font-family: Georgia, serif;
     font-size: 4rem;
     font-weight: bold;
 }
+blockquote::before {
+  content: "\201D";          
+  font-family: Arial, Helvetica, sans-serif;  
+  font-size: 3.5em;
+  line-height: 0;                
+  vertical-align: -0.35em;       
+  margin-right: 0.1em;
+}
+
+
 
 footer{
-    font-family: Georgia, serif;
     font-weight: 100;
     font-size: 1.2rem;
     line-height: 1.8;
@@ -125,6 +162,7 @@ footer{
     justify-content: center;
     padding: 3rem;
     gap: 1.5rem;
+    justify-items: center;
 }
 
 .footer-section-3{
@@ -146,4 +184,110 @@ footer{
     font-size: 1.4rem;
     width: 1.6rem;
     text-align: center;
+}
+
+
+
+/*Desktop view */
+
+
+@media screen and (min-width: 480px) {
+    .header{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    height: 10vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
+    position:absolute;
+    width: 100%;
+    top: 0;
+    }
+
+    .header a {
+        color:white;
+        margin-right: 2rem;
+    }
+
+    .header a:link{
+        text-decoration: none;
+    }
+
+
+    .card-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .team {
+        display: block;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 2rem 1rem;
+        justify-content: center;
+        position: relative;
+    }
+
+    .team h2 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .team-title{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .avatar {
+    width: 20vw;
+    border-radius: 50%;
+    box-shadow: 3px 4px 12px 12px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    }
+
+    .avatar-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .avatar-quote {
+        background-color: lightgrey;
+        border-radius: 3%;
+        min-height: 10vh;
+        align-self: center;
+        position: relative;
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+    .quote-mark {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 30vh;
+    }
+
+    .footer-section-1{
+        grid-area: 1;
+    }
+    .footer-section-2{
+        grid-area: 1;
+    }
+    .footer-section-3{
+        grid-area: 1;
+    }
+
 }

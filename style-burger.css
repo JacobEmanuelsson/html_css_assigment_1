@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero {
+    font-weight: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2.5rem;
+    height: 100vh;
+
+    background-image: url('/html_css_assigment_1/assets/assets/negative-space-black-forest-dawn.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-top: 2.1rem;
+    margin-bottom: 3rem;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.move-btn-1, .move-btn-1:hover, .move-btn:visited, .move-btn:active {
+    color: inherit;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.move-btn, .move-btn:hover, .move-btn:visited, .move-btn:active {
+    color: inherit;
+    position: absolute;
+    bottom: 5%;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+
+.hero-button {
+    display: flex;
+}
+
+.header {
+    font-weight: 100;
+    font-size: 1.4rem;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    justify-content: flex-end;
+
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.header a:link {
+    text-decoration: none;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    justify-content: center;
+    position: relative;
+}
+
+.team h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    width: 80vw;
+    border-radius: 50%;
+    box-shadow: 3px 4px 12px 12px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.avatar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.avatar-quote {
+    background-color: lightgrey;
+    border-radius: 3%;
+    min-height: 10vh;
+    align-self: center;
+    position: relative;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+.quote-mark {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+blockquote::before {
+    content: "\201D";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+    line-height: 0;
+    vertical-align: -0.35em;
+    margin-right: 0.1em;
+}
+
+footer {
+    font-weight: 100;
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    height: 60vh;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    gap: 1.5rem;
+    padding: 3rem;
+}
+
+.footer-section-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.social {
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social .fa-brands {
+    font-size: 1.4rem;
+    width: 1.6rem;
+    text-align: center;
+}
+
+/* Desktop view */
+
+@media screen and (min-width: 480px) {
+    .header {
+        flex-direction: row;
+        height: 10vh;
+    }
+
+    .header a {
+        margin-right: 2rem;
+    }
+
+    .card-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .team {
+        display: block;
+    }
+
+
+    .avatar {
+        width: 20vw;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        height: 30vh;
+    }
+
+    .footer-section-1 {
+        grid-area: 1;
+    }
+
+    .footer-section-2 {
+        grid-area: 1;
+    }
+
+    .footer-section-3 {
+        grid-area: 1;
+    }
+}
